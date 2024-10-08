@@ -1,0 +1,21 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg  bg-dark navbar-dark nav-color">
+    <div class="container">
+      <a class="navbar-brand fw-bold fst-italic" href="/">Rodrigo Reyes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class=" ms-auto" id="navbarNavAltMarkup">
+        <div class="navbar-nav align-items-center ">
+
+          <a class="nav-link " href="/home">Inicio</a>
+
+            <a  class="btn btn-primary btn-sm btn-color" href="{% static 'portafolio/Cv.pdf' %}"
+            target="_blank">Descargar CV</a >
+
+
+        </div>
+      </div>
+    </div>
+  </nav>
