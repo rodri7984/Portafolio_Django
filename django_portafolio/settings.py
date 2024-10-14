@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-b(05!2-na6tk=qto=deva%%(id)2sf1d2_2u%t5)p5@y(msjty
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://railway.app/project/7c313711-573a-4a89-8a72-cc9671d37c61/service/2445ad5a-4292-4147-8f6f-1e12e8914259']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -117,14 +117,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles/')
 
 MEDIA_ROOT = BASE_DIR / 'media'
 
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-        os.path.join(BASE_DIR,'static'),
+        os.path.join(BASE_DIR,'static/'),
 ]
 
 # Default primary key field type
