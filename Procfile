@@ -1,1 +1,1 @@
-web: gunicorn django_portafolio.wsgi --log-file -
+web: python manage.py collectstatic && gunicorn django_portafolio.wsgi --log-file -
