@@ -141,6 +141,18 @@ STATICFILES_DIRS = [
         os.path.join(BASE_DIR,'static/'),
 ]
 
+STORAGES = {
+    'default': {
+        'BACKEND': 'django.core.files.storage.FileSystemStorage',
+        'LOCATION': MEDIA_ROOT,  # Usualmente para archivos subidos por los usuarios
+    },
+    'staticfiles': {
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        'LOCATION': STATIC_ROOT,  # Para los archivos estáticos
+    },
+}
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
