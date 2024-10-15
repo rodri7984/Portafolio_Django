@@ -28,6 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['https://portafoliodjango-production.up.railway.app/', 'localhost']
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
